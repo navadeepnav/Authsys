@@ -1,0 +1,108 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome | Agrilife - Your Destination</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/mybootstrap.css"> 
+<link rel="stylesheet" href="css/animate.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Anton|Lato" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target="#noo-nav" data-offset="50">
+	<!--- Navigation ---->
+	<header>
+		<div class="noo-nav" id="noo-nav">
+			<nav class="navbar navbar-fixed-top ">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			          <i class="fa fa-bars"></i>              
+			    </button>
+			      <a style="font-family: 'Anton', sans-serif; font-size: 30px;" class="navbar-brand" href="#">AGRILIFE</a>
+			    </div>
+			  <div class="collapse navbar-collapse navbar-right bg-dark" id="myNavbar">
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Home</a></li>
+			      <li><a href="#about">About</a></li>
+			      <li><a href="#">Services</a></li>
+			      <li><a href="#">Products</a></li>
+			      <li><a href="#">Contact</a></li>
+			    </ul>
+			  </div>
+			  </div>
+			</nav>
+		</div>
+	</header>
+
+	<!--- Breadcrumb ---->
+		<div class="noo-bread">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item active"><a href="#">Add New</a></li>
+			</ol>
+		</div>
+	
+	<!--- Breadcrumb ---->
+	<!--- Form ---->
+	<div class="update-details">
+		<div class="container-fluid">
+			<div class="col-md-6 col-sm-12">
+				<div class="update-form">
+					<form class="form-horizontal" method="post" action="php/addproductdb.php">
+					    <div class="form-group">
+					      <label class="control-label" for="batch">Batch Id</label></br>
+					      <input type="text" class="form-control" id="batch" placeholder="Batch Id" name="batch">
+					   	 </div>
+					     <div class="form-group">
+					      <label class="control-label" for="price">Series</label></br>
+					        <input type="text" class="form-control" id="series" placeholder="Series" name="series">
+					    </div>
+					    <div class="form-group">
+					      <label class="control-label" for="product-name">Product Name</label></br>
+					        <input type="text" class="form-control" id="product-name" placeholder="Product Name" name="product-name">
+					    </div>
+					    <div class="form-group">
+					      <label class="control-label" for="price">Cateogory</label></br>
+					        <div class="radio">
+							  <label><input type="radio" name="category" value="seeds">Seeds</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" name="category" value="fertilizers">Fertilizers</label>
+							</div>
+					    </div>
+					    <div class="form-group">
+					      <label class="control-label" for="price">Price</label></br>
+					        <input type="number" class="form-control" id="price" placeholder="Price" name="price">
+					    </div>
+					    <div class="form-group">
+					     <label class="control-label" for="details">Details</label></br>
+					    <textarea rows="10" cols="90" placeholder="Enter Product Details" name="details">	</textarea>
+					    </div>
+					    <div class="form-group">
+					    	 <label class="control-label" for="productpic">Product Image</label></br>
+					    	<input type="file" name="productpic" accept="image/*">
+					    </div>
+					    <div class="form-group">
+					     <label class="control-label" for="usage">Details</label></br>
+					    <textarea rows="10" cols="90" placeholder="How to use..." name="howtouse">	</textarea>
+					    </div>
+					    <div class="form-group">        
+					        <button type="submit" name="submit" class="btn btn-default">Add Product</button>
+					    </div>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!--- Form ---->
+<!--- Script ---->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--- Script ---->
+</body>
+</html>

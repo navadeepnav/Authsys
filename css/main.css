@@ -1,0 +1,318 @@
+body{
+	background-color: #494949;
+}
+/*===================== Navigation ===============*/
+.noo-nav{
+	width:99%
+}
+.navbar {
+color: white;
+padding-top: 15px;
+position: fixed;
+}
+.navbar:scroll {
+background-color: black;
+}
+.navbar-brand{
+	color: white;
+	padding-left: 50px;
+}
+.navbar-brand:hover, .navbar-brand:focus{
+	color: white;
+}
+.navbar-nav li a{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	color:white;
+}
+.nav>li>a:hover {
+    border-bottom: 5px solid white;
+    color:green;
+    font-style: bold;
+    background-color: rgb(10, 255, 189);
+}
+.nav>li>a:focus {
+    border-bottom: 5px solid white;
+    background-color: white;
+    color:green;
+}
+
+.collapse .navbar-collapse{
+	float: left;
+	background-color: #494949;
+	z-index: 1;
+}
+.navbar-header{
+	padding-left: 20px;
+}
+/* ================ Banner ======================== */
+.parallax-container{
+	height:100%;
+}
+#banner {
+	/*background-color: #1e1e1f;*/
+	background-image: url('../images/Cover_Home.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	width:100%;
+	background-attachment: fixed;
+}
+.banner-text {
+	position: absolute;
+	top:250;
+}
+.banner-text h1 {
+	color: rgb(255, 255, 255);
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+	line-height: 48px;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: type 2s steps(17) infinite;
+	animation-direction: alternate;
+	border-right: 3px solid white;
+}
+@keyframes type{ 
+	from { width: 0; } 
+	to {width: 17ch;}
+  }   
+.banner-text span {
+	font-weight: 300;
+}
+.banner-text p {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	margin-bottom: 7%;
+}
+.banner-img {
+	bottom: -186px;
+	position: relative;
+}
+.banner-btn a {
+	margin-right: 15px;
+	display:inline-block
+}
+/* ================ Banner ======================== */
+/* ================ Abouts Us ======================== */
+.about{
+	min-height: 100%;
+	/*background-color: rgb(23, 239, 146);*/
+	background-image: url('../images/world_light.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+.about-text{
+	padding-top: 15%;
+	margin-bottom: 10%
+}
+.about-text h1{
+	padding-left: 5%;
+}
+.about-div{
+	height: 5px;
+	width: 60px;
+	border-radius: 100px;
+	margin-left: 5%;
+	background-color: #494949;
+}
+.about-text p{
+	padding: 15px;
+	padding-left: unset;
+	margin-left: 5%;
+	font-size: 18px;
+	font-style: 'Lato';
+}
+.about-img{
+	height: 300%;
+	width: 300%;
+	/*margin-left: 5%;*/
+	margin-top: 10%;
+}	
+/* ================ Abouts Us ======================== */
+/*================= Services =========================*/
+.noo-services{
+	min-height: 100%;
+	/*background-color: rgb(175, 175, 175);*/
+	background-image: url('../images/services.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+.service-text{
+	margin-top: 10%;
+}
+#service-row{
+	width: 98%;
+}
+.services-div{
+	height: 5px;
+	width: 60px;
+	border-radius: 100px;
+	/*margin-left: 650px;*/
+	background-color: #494949;
+	margin: 10px 10px 20px 47%;
+}
+.itemset{
+	padding: 20px;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	height: wrap;
+	width: wrap;
+	background-color: #ffffff;
+	border:1px solid black;
+	border-radius: 25px;
+	align-items: center;
+	margin-left: 10%;
+	box-shadow: 1px 1px 3px 3px #888888;
+}
+.items{
+	align-content: center;
+	vertical-align: middle;
+}
+.btn-services {
+    color: #ffffff;
+    background-color: #494949;
+    border-color: #ffffff;
+    border-radius: 25px;
+}
+
+.btn-services.focus,
+.btn-services:focus {
+    color: #ffffff;
+    background-color: #e494949;
+    border-color: #8c8c8c
+}
+
+.btn-services:hover {
+    color: #ffffff;
+    background-color: #e494949;
+    border-color: #adadad
+}
+/*================= Services =========================*/
+/*================= Footer =========================*/
+.noo-footer{
+	min-height: 100%;
+	background-color: #494949;
+	/*background-image: url('../images/world_light.png');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.contact-form{
+	margin-left: 8%;
+	margin-top: 15%;
+}
+.form-heading {
+	margin:5%;
+	margin-left: unset;
+}
+.form-group{
+	margin-top: 3%;
+}
+.find-heading{
+	margin-top: 20%;
+	margin-left: 35%;
+}
+.contact-list{
+	margin-top: 4%;
+	margin-left: 30%;
+	margin-right: 20%;
+	list-style: none;
+	color: #ffffff;
+	font-size: 20px;
+	margin-bottom: 20%;
+}
+.list-item{
+	padding: 1%;
+}
+/*================= Footer =========================*/
+/* ================ Admin Page ======================== */
+#admin-banner {
+	background-image: url('../images/admin_cover.jpg') ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	width:100%;
+}
+.update{
+	padding-top: 45%;
+	text-align: center;
+	color: #ffffff;
+	font-family: 'Lato';
+}
+.update-btn{
+	min-height:40px;
+	width: wrap; 
+	color:#494949;
+	background-color: #ffffff;
+	border-style: none;
+	font-family: 'Anton';
+	letter-spacing: 1.5px;
+	border-radius: 25px;
+	padding: 10px;
+}
+/* ================ Admin Page ======================== */
+/* ================ Update Page ======================== */
+.noo-bread{
+	background-image: url(../images/bread.jpg);
+    min-height: 200px; 
+    border-bottom: 10px solid rgb(140, 14, 14);
+    position: relative;
+}
+.update-details{
+	padding-top: 20px;
+	padding-left: 30px;
+	background-color: #ffffff;
+}
+.form-group{
+	animation: slideInUp 1s;
+}
+.form-control:focus, .form-control:hover{
+	 transform: scale(1., 1);
+
+}
+.update-qr{
+	float: right;
+	min-height: 300px;
+	min-width: 300px;
+}
+/* ================ Update Page ======================== */
+/* ================ Product Page ======================== */
+.productdesc,
+.productusage{
+	border:2px solid #494949;
+	padding: 5%;
+	margin-left: 5%;
+	margin-right: 2%;
+}
+
+.p-labels{
+	font-weight: bolder;
+}
+.product-img{
+	border:2px solid rgb(53,53,53);
+	/*background-color: #494949;*/
+	padding: 5%;
+}
+.pro-foot{
+	height: 10%;
+	width: 100%;
+	background-color: #494949;
+	margin-top: 5%;
+}
+.footer-ele{
+	padding-top:1%; 
+}
+#confirm{
+	background-color: #494949;
+	border: 2px solid #ffffff;
+	padding: 1%;
+}
+/* ================ Product page ======================== */
