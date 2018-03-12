@@ -19,13 +19,14 @@ else{
 	$query = mysqli_query($conn,"insert into $productname(batchId,productid,series,productname,category,price) values ('$batch','$productid','$series','$productname','$category','$price')");
 
 	if(!($query)){
-		header('Location: ../add.html'); 
 		echo "<script type='text/javascript'>alert('Not Updated');</script>";
+		header('Location: ../add.html'); 
 
 	}
 	else{
-		header('Location: ../update.html'); 
 		echo "<script type='text/javascript'>alert('Updated');</script>";
+		header('Location: ../update.html'); 
+		
 	}
 }
 mysqli_close($conn);

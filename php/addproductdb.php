@@ -24,12 +24,12 @@ else{
 	$query = mysqli_query($conn,"insert into products(batchId,productName,series,price,category,details,howToUse,productimg) values ('$batch','$productname','$series','$price','$category','$details','$howtouse','$productimg')");
 
 	if(!($query)){
-		header('Location: ../add.html'); 
 		echo "<script type='text/javascript'>alert('Not Created');</script>";
+		header('Location: ../add.html'); 
 	}
 	else{
-		header('Location: ../update.html'); 
 		echo "<script type='text/javascript'>alert('Product Created');</script>";
+		header('Location: ../update.html'); 
 	}
 	if(!($querycreate)){
 		echo "<script type='text/javascript'>alert('Not Created');</script>";

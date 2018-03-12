@@ -14,8 +14,8 @@ if($_POST["name"]==""||$_POST["dealer"]==""||$_POST["state"]==""||$_POST["area"]
 echo "Fill All Fields..";
 }
 else{
- $mail->SMTPDebug = 2;                                 // Enable verbose debug output
- $mail->isSMTP();                                      // Set mailer to use SMTP
+ // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+ // $mail->isSMTP();                                      // Set mailer to use SMTP
  $mail->Host = 'smtp.gmail.com';  						// Specify main and backup SMTP servers
  $mail->SMTPAuth = true;                               // Enable SMTP authentication
  $mail->Username = 'navarocks123@gmail.com';                 // SMTP username
@@ -23,7 +23,13 @@ else{
  $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
  $mail->Port = 587; 
 
- $message="Dealer Name:".$_POST['dealer']."from area:".$_POST['area']."from state:".$_POST['state']. "and issue is".$_POST['message'].".";
+ $message="<p>Hello Agrilife,</p>".
+ 			"<p>This is a complaint mail and the details of dealer are as follows.</p>".
+ 			"<p><b> Dealer Name:</b>"."  ".$_POST['dealer'].
+ 			"</p><p><b>Area:</b>"."  ".$_POST['area'].
+ 			"</p><p><b>State:</b>"."  ".$_POST['state'].
+ 			"</p><p><b>Issue:</b>"."  ".$_POST['message'].".";
+
 
 $mail->From =$_POST['email'];
 $mail->FromName =$_POST['name'];
@@ -43,6 +49,25 @@ else
 }
 
 }
+$cname=$_POST['name'];
+$message=$_POST['message'];
+$dname=$_POST['dealer'];
+$state=$_POST['state'];
+$mail=$_POST['email'];
+$area=$_POST['area'];
+
+// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+$conn = mysqli_connect("localhost","root","","authsys");
+
+// SQL query to fetch information of registerd users and finds user match.
+$query = mysqli_query($conn,"INSERT INTO COMPLAINTS (cname,email,dname,area,state,message) values ('$cname','$mail','$dname','$area','$state','$message')");
+if(!($query)){
+		echo "<script type='text/javascript'>alert('Not Registered');</script>";
+	}
+	else{
+		echo "<script type='text/javascript'>alert('Registered');</script>";	
+	}
+mysqli_close($conn); // Closing Connection
 }
 
 

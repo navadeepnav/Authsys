@@ -51,7 +51,7 @@ background-color: black;
 }
 #banner {
 	/*background-color: #1e1e1f;*/
-	background-image: url('../images/Cover_Home.jpg') ;
+	background-image: url('../images/banner.png') ;
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100%;
@@ -218,12 +218,14 @@ background-color: black;
 }
 .find-heading{
 	margin-top: 20%;
-	margin-left: 35%;
+	margin-left: 8%;
+}
+.contactus{
+	margin-left: 10%;
+	margin-right: 10%
 }
 .contact-list{
 	margin-top: 4%;
-	margin-left: 30%;
-	margin-right: 20%;
 	list-style: none;
 	color: #ffffff;
 	font-size: 20px;

@@ -1,63 +1,53 @@
 <?php
-/* Set e-mail recipient */
-$myemail  = "navarocks123@gmail.com";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-/* Check all form inputs using check_input function */
-$yourname = check_input($_POST['name'], "Enter your name");
-$subject  = check_input($_POST['subject'], "Write a subject");
-$email    = check_input($_POST['email']);
-$comments = check_input($_POST['message'], "Write your comments");
+require_once "vendor/autoload.php";
 
-/* If e-mail is not valid show error message */
-if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
+
+$mail = new PHPMailer;
+
+if(isset($_POST["submit"])){
+// Checking For Blank Fields..
+if($_POST["name"]==""||$_POST["email"]==""||$_POST["subject"]==""||$_POST["message"]==""){
+echo "Fill All Fields..";
+}
+else{
+ // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+ // $mail->isSMTP();                                      // Set mailer to use SMTP
+ $mail->Host = 'smtp.gmail.com';  						// Specify main and backup SMTP servers
+ $mail->SMTPAuth = true;                               // Enable SMTP authentication
+ $mail->Username = 'navarocks123@gmail.com';                 // SMTP username
+ $mail->Password = '#knowme@nava';                           // SMTP password
+ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+ $mail->Port = 587; 
+
+ $message="<p>Hello Agrilife,</p>".
+ 			"<p>You have a message/enquiry from <b>Mr./Mrs.".$_POST['name']."</b>".
+ 			"</p><p><b>Message:</b>"."  ".$_POST['message'].".";
+
+
+$mail->From =$_POST['email'];
+$mail->FromName =$_POST['name'];
+$mail->addAddress("navarocks123@gmail.com", "Navadeep");
+$mail->addCC($_POST['email'],$_POST['name']);
+$mail->WordWrap=50;
+$mail->isHTML(true);
+$mail->Subject = $_POST['subject'];
+$mail->Body = $message;
+if(!$mail->send()) 
 {
-    show_error("E-mail address not valid");
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} 
+else 
+{
+    echo "Message has been sent successfully
+    ";
+}
+
+}
 }
 
 
-/* Let's prepare the message for the e-mail */
-$message = "Hello!
-
-Your contact form has been submitted by:
-
-Name: $yourname
-E-mail: $email
-Comments:
-$comments
-
-End of message
-";
-
-/* Send the message using mail() function */
-mail($myemail, $subject, $message);
-
-exit();
-
-/* Functions we used */
-function check_input($data, $problem='')
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    if ($problem && strlen($data) == 0)
-    {
-        show_error($problem);
-    }
-    return $data;
-}
-
-function show_error($myError)
-{
-?>
-    <html>
-    <body>
-
-    <b>Please correct the following error:</b><br />
-    <?php echo $myError; ?>
-
-    </body>
-    </html>
-<?php
-exit();
-}
 ?>

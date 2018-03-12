@@ -28,10 +28,10 @@
 			  <div class="collapse navbar-collapse navbar-right bg-dark" id="myNavbar">
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="index.html">Home</a></li>
-			      <li><a href="#about">About</a></li>
-			      <li><a href="#services">Services</a></li>
+			      <li><a href="index.html#about">About</a></li>
+			      <li><a href="index.html#services">Services</a></li>
 			      <li><a href="#">Products</a></li>
-			      <li><a href="#footer">Contact</a></li>
+			      <li><a href="index.html#footer">Contact</a></li>
 			      <li><a class="btn" style="color: #ffffff;background-color: unset; border:1px solid #ffffff;" data-toggle="modal" data-target="#complaintModal">Complaint</a></li>
 			    </ul>
 			  </div>
